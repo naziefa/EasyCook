@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EasyCook - My Recipe Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="collection">
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">🍲 Easy<span>Cook</span></div>
+
+      <nav class="nav">
+        <a href="index.html" data-page="home">🏠 <span>Home</span></a>
+        <a href="recipes.html" data-page="recipes">🔎 <span>Recipe Explorer</span></a>
+        <a href="suggestion.html" data-page="suggestion">✨ <span>Recipe Suggestion</span></a>
+        <a href="collection.html" data-page="collection">♡ <span>My Recipe Collection</span></a>
+        <a href="mealplan.html" data-page="mealplan">📅 <span>Weekly Meal Planner</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">🧁 💜</div>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL COOKBOOK</p>
+          <h1>My Recipe Collection ♡</h1>
+          <p class="subtitle">
+            Keep your favourite recipes in one place.
+          </p>
+        </div>
+
+        <div class="header-art">📖</div>
+      </div>
+
+      <div class="search-row">
+        <input
+          id="collectionSearch"
+          class="input"
+          placeholder="Search your saved recipes..."
+        >
+      </div>
+
+      <p id="collectionMessage" class="message"></p>
+
+      <div id="collectionList" class="collection-list"></div>
+
+      <div id="noteEditor" class="panel hidden">
+        <h2>Edit Cooking Notes</h2>
+
+        <p id="editingRecipeName"></p>
+
+        <textarea
+          id="noteInput"
+          rows="4"
+          placeholder="Write your cooking notes..."
+        ></textarea>
+
+        <div class="actions">
+          <button id="saveNoteBtn" class="btn primary">
+            Save Notes
+          </button>
+
+          <button id="cancelNoteBtn" class="btn light">
+            Cancel
+          </button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="collection.js"></script>
+</body>
+</html>

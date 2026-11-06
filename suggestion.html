@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EasyCook - Recipe Suggestion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="suggestion">
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">🍲 Easy<span>Cook</span></div>
+
+      <nav class="nav">
+        <a href="index.html" data-page="home">🏠 <span>Home</span></a>
+        <a href="recipes.html" data-page="recipes">🔎 <span>Recipe Explorer</span></a>
+        <a href="suggestion.html" data-page="suggestion">✨ <span>Recipe Suggestion</span></a>
+        <a href="collection.html" data-page="collection">♡ <span>My Recipe Collection</span></a>
+        <a href="mealplan.html" data-page="mealplan">📅 <span>Weekly Meal Planner</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">🧁 💜</div>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">DON'T KNOW WHAT TO COOK?</p>
+          <h1>Recipe Suggestion ✨</h1>
+          <p class="subtitle">
+            Choose a food category and let EasyCook suggest a recipe.
+          </p>
+        </div>
+
+        <div class="header-art">🥗</div>
+      </div>
+
+      <div class="panel">
+        <h2>What are you craving?</h2>
+
+        <div id="suggestionCategories" class="suggestion-categories">
+
+          <button class="category-btn selected" data-category="Chicken">
+            🍗 <span>Chicken</span>
+          </button>
+
+          <button class="category-btn" data-category="Beef">
+            🥩 <span>Beef</span>
+          </button>
+
+          <button class="category-btn" data-category="Seafood">
+            🐟 <span>Seafood</span>
+          </button>
+
+          <button class="category-btn" data-category="Vegetarian">
+            🥬 <span>Vegetarian</span>
+          </button>
+
+        </div>
+
+        <button id="suggestBtn" class="btn primary">
+          ✨ Suggest Recipes
+        </button>
+      </div>
+
+      <p id="suggestionMessage" class="message"></p>
+
+      <div id="suggestionResults" class="recipe-grid"></div>
+
+    </main>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="suggestion.js"></script>
+</body>
+</html>

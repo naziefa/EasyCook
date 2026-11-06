@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EasyCook - Recipe Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="recipes">
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">🍲 Easy<span>Cook</span></div>
+
+      <nav class="nav">
+        <a href="index.html" data-page="home">🏠 <span>Home</span></a>
+        <a href="recipes.html" data-page="recipes">🔎 <span>Recipe Explorer</span></a>
+        <a href="suggestion.html" data-page="suggestion">✨ <span>Recipe Suggestion</span></a>
+        <a href="collection.html" data-page="collection">♡ <span>My Recipe Collection</span></a>
+        <a href="mealplan.html" data-page="mealplan">📅 <span>Weekly Meal Planner</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">🧁 💜</div>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">FIND YOUR NEXT FAVOURITE</p>
+          <h1>Recipe Explorer 🍰</h1>
+          <p class="subtitle">
+            Browse recipes from around the world.
+          </p>
+        </div>
+
+        <div class="header-art">🥞</div>
+      </div>
+
+      <div id="explorerView">
+
+        <div class="search-row">
+          <input
+            id="searchInput"
+            class="input"
+            placeholder="Search for a recipe (e.g. chicken, pasta, dessert)"
+          >
+
+          <button id="searchBtn" class="btn primary">
+            🔎 Search
+          </button>
+        </div>
+
+        <!-- MINI CATEGORY BUTTONS -->
+
+        <div id="categoryFilters" class="mini-categories">
+
+          <button type="button" class="chip active" data-category="All">
+            <span class="mini-icon">⊞</span>
+            <span>All</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Breakfast">
+            <span class="mini-icon">🍳</span>
+            <span>Breakfast</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Lunch">
+            <span class="mini-icon">🍱</span>
+            <span>Lunch</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Dinner">
+            <span class="mini-icon">🍴</span>
+            <span>Dinner</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Dessert">
+            <span class="mini-icon">🧁</span>
+            <span>Dessert</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Vegetarian">
+            <span class="mini-icon">🥬</span>
+            <span>Vegetarian</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Chicken">
+            <span class="mini-icon">🍗</span>
+            <span>Chicken</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Beef">
+            <span class="mini-icon">🥩</span>
+            <span>Beef</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Seafood">
+            <span class="mini-icon">🐟</span>
+            <span>Seafood</span>
+          </button>
+
+          <button type="button" class="chip" data-category="Miscellaneous">
+            <span class="mini-icon">•••</span>
+            <span>Others</span>
+          </button>
+
+        </div>
+
+        <div class="section-line">
+          <h2>Explore Recipes</h2>
+          <span id="recipeCount" class="muted"></span>
+        </div>
+
+        <p id="recipeMessage" class="message"></p>
+
+        <section id="recipeResults" class="recipe-grid"></section>
+
+        <div class="load-more-wrap">
+          <button id="loadMoreBtn" class="btn light hidden">
+            Load More Recipes ↓
+          </button>
+        </div>
+
+      </div>
+
+      <section id="recipeDetails" class="hidden"></section>
+
+    </main>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="recipes.js"></script>
+</body>
+</html>
